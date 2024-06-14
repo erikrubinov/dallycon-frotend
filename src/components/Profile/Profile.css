@@ -1,0 +1,93 @@
+/* SubmitPrompt.css Updated */
+
+.header {
+    display: flex;
+    justify-content: space-between; /* This will place one element on the far left and the other on the far right */
+    padding: 10px 20px; /* Provides some spacing */
+    background-color: #f1f1f1; /* Gives a slight background color, adjust as needed */
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 100px;
+    resize: vertical;
+}
+
+
+.logout-btn {
+    padding: 10px 20px;
+    background-color: #dc3545; /* Red color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: auto; /* Ensures the button only takes as much width as needed */
+    max-width: 150px; /* Optionally restrict maximum width */
+}
+
+.logout-btn:hover {
+    background-color: #c82333; /* Darker shade of red on hover */
+}
+
+.settings-btn {
+    padding: 10px 20px;
+    background-color: #1c21b6; /* Red color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: auto; /* Ensures the button only takes as much width as needed */
+    max-width: 150px; /* Optionally restrict maximum width */
+}
+
+.info-message {
+    color: #333;
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+
+ul {
+    list-style-type: none; /* Removes the bullet points */
+    padding: 0; /* Removes padding if not already done */
+    margin: 0; /* Adjust margin as needed */
+}
+
+.prompt-container {
+    padding: 20px;
+    background: rgb(138, 194, 196);
+    border-radius: 15px;
+    margin: 20px auto; /* Centers the container and adds vertical spacing */
+    max-width: 60%; /* Restricts the maximum width to 60% of the parent element */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: adds subtle shadow for depth */
+    transition: transform 0.4s; /* Smooth transition for hover effects */
+}
+
+.prompt-container:hover {
+    transform: scale(1.01); /* Slightly enlarges the prompt container on hover */
+    cursor: pointer; /* Changes cursor to indicate clickable */
+}
+
+
+.prompt-boxes-container {
+    display: flex;
+    flex-direction: row; /* aligns children horizontally */
+    gap: 20px; /* adds space between each prompt box */
+    overflow-x: auto; /* allows horizontal scrolling if boxes overflow the view */
+    padding: 10px; /* optional, adds some padding around the boxes */
+  }

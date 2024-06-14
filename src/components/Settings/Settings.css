@@ -1,0 +1,65 @@
+.settings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.recorder-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    border: 2px solid #ccc; /* Example: light grey border */
+    padding: 20px; /* Add some padding inside the container */
+    margin-top: 20px; /* Optional: add some space above the container */
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: soft shadow for depth */
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.record-btn {
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+.record-btn {
+    background-color: red;
+}
+
+.pause-btn, .resume-btn {
+    box-shadow: 2 4px 8px rgba(142, 103, 103, 0.1); /* Optional: soft shadow for depth */
+}
+
+.stop-btn {
+    box-shadow: 2 4px 8px rgba(0,0,0,0.1); /* Optional: soft shadow for depth */
+}
+
+.save-btn {
+    border-radius: 60%;
+    width: 40%;
+}
+
+.delete_button{
+    color: red;
+}
+
+i {
+    color: white;
+}
