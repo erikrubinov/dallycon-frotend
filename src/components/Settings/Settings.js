@@ -24,17 +24,7 @@ function Settings() {
         }
     
         try {
-            /*
-            const response = await fetch(mediaUrl);
-            const blob = await response.blob(); // Convert the media URL to a blob
-            console.log("Blob size:", blob.size); // Check if the blob size is greater than 0
-            
-            const mp3Blob = new Blob([blob], { type: 'audio/mp3' });
-            console.log("MP3 Blob size:", mp3Blob.size); // Also check this size
-            
-            const formData = new FormData();
-            formData.append('file', blob, 'recording.mp3');
-            */
+
             const response = await fetch(mediaUrl);
             const blob = await response.blob(); // Convert the blob URL to a file-like Blob object
         
