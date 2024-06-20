@@ -95,7 +95,7 @@ function Settings() {
                     onStop={(blobUrl) => {console.log("Recording stopped. URL:", blobUrl); setSavedRecording(blobUrl)}}
                     render={({ startRecording, stopRecording, pauseRecording, resumeRecording, mediaBlobUrl }) => (
                         <div className="controls">
-                            <p>{isRecording ? (isPaused ? 'Paused' : 'Recording') : 'Not Recording'}</p>
+                            <p>{isRecording ? (isPaused ? 'Paused' : 'Recording') : 'Not Recording!'}</p>
                             {!isRecording && (
                                 <button className="record-btn" onClick={() => {
                                     startRecording();
