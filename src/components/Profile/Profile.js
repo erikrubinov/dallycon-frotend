@@ -7,6 +7,8 @@ import { getPromptBoxes } from './functions/get_prompts.js';
 import { handlePromptClick } from './functions/update_prompt.js';
 import { updatePromptOrder } from './functions/update_prompt_order.js';
 import { DragDropContext, Droppable, Draggable } from '@hello-pangea/dnd';
+import Recorder from './Recorder.js'; // Make sure this is the correct path
+
 
 
 function SubmitPrompt() {
@@ -102,13 +104,17 @@ function SubmitPrompt() {
         <button onClick={() => handleLogout(navigate)} className="logout-btn">Logout</button>
         <button onClick={() =>  navigate('/settings')} className="settings-btn">Settings</button>
       </div>
-      <form onSubmit={(event) => handleSubmit(event, text, token, setMessage, setShowMessage, navigate, setnewPrompt)}>
-        <label>
-          Enter your prompt:
-          <textarea value={text} onChange={e => setText(e.target.value)} />
-        </label>
-        <button type="submit">Submit</button>
-      </form>
+      <div class="row">
+        <form onSubmit={(event) => handleSubmit(event, text, token, setMessage, setShowMessage, navigate, setnewPrompt)}>
+          <label>
+            Enter your prompt:
+            <textarea value={text} onChange={e => setText(e.target.value)} />
+          </label>
+          <button type="submit">Submit</button>
+        </form>
+        < Recorder />  {/* Embedded Settings component */}
+      </div>
+     
       {showMessage && <div className="info-message">{message}</div>}
       <DragDropContext onDragEnd={handleDragEnd}>
   <div className="prompt-boxes-container">

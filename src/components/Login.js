@@ -6,6 +6,7 @@ function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+
   const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
@@ -40,8 +41,9 @@ function Login() {
   };
 
   return (
-    <div className="form-container">
-      <form onSubmit={handleSubmit}>
+    <div>
+      {errorMessage && <div className="notification">{errorMessage}</div>}
+      <form>
         <label>
           Username:
           <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
@@ -50,9 +52,8 @@ function Login() {
           Password:
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </label>
-        <button type="submit">Login</button>
+        <button type="submit" onClick={handleSubmit} >Login</button>
         <button type="button" onClick={handleRegisterRedirect}>Register</button> {/* New Register button */}
-        {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
       </form>
     </div>
   );

@@ -40,13 +40,22 @@ function Register() {
       if (response.ok) {
         console.log('Registration successful:', data);
         setNotification('Registration successful! You can now log in.');
+        setTimeout(() => {
+          setNotification('');
+        }, 5000); // Hide notification after 5 seconds
       } else {
         console.error('Registration failed:', response.status);
         setNotification(data.message || 'Registration failed. Please try again.');
+        setTimeout(() => {
+          setNotification('');
+        }, 5000); // Hide notification after 5 seconds
       }
     } catch (error) {
       console.error('Error during fetch:', error);
       setNotification('An error occurred during registration.');
+      setTimeout(() => {
+        setNotification('');
+      }, 5000); // Hide notification after 5 seconds
     }
   };
 
@@ -74,7 +83,7 @@ function Register() {
           Password:
           <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
         </label>
-        <button type="submit">Register</button>
+        <button type="button" onClick={handleSubmit}>Register</button>
         <button type="button" onClick={handleLoginRedirect}>Login</button>
       </form>
     </>
