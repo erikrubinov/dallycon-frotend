@@ -112,6 +112,7 @@ function SubmitPrompt() {
           </label>
           <button type="submit">Submit</button>
         </form>
+        
         < Recorder />  {/* Embedded Settings component */}
       </div>
      
